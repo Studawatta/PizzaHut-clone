@@ -5,6 +5,7 @@ import { GrPowerReset } from 'react-icons/gr';
 import { SlPeople } from 'react-icons/sl';
 import { BsPersonAdd } from 'react-icons/bs';
 import { FcGoogle } from 'react-icons/fc';
+import Footer from '../../components/Footer';
 
 const SignIn = () => {
   const inputContStyle = 'flex flex-col gap-1';
@@ -13,7 +14,7 @@ const SignIn = () => {
   return (
     <div>
       <Navbar />
-      <div className="bg-slate-200 w-full h-[calc(100vh-420px)] md:h-[calc(100vh-160px)]  flex justify-center">
+      <div className="bg-slate-200 w-full md:h-[calc(100vh-160px)]  flex justify-center pb-10 md:pb-0">
         <div className="bg-white h-fit mt-20 shadow-2xl rounded-md p-5">
           <h1 className="text-slate-700 text-xl text-center">
             LET'S START YOUR ORDER
@@ -83,6 +84,7 @@ const SignIn = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
