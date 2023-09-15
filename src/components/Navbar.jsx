@@ -17,9 +17,11 @@ const Navbar = () => {
           <img src={logo} alt="logo" className="h-10 cursor-pointer" />
         </Link>
         {/* LINKS */}
-        <div className="hidden md:flex items-center gap-6 text-slate-700 font-bold text-[18px]">
+        <div className="hidden lg:flex items-center gap-6 text-slate-700 font-bold text-[18px]">
           <Link className={linkStyle}>HOME</Link>
-          <Link className={linkStyle}>MENU</Link>
+          <Link to="/menu" className={linkStyle}>
+            MENU
+          </Link>
           <Link to="/promos" className={linkStyle}>
             PROMOS
           </Link>

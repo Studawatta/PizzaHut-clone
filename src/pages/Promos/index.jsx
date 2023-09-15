@@ -12,16 +12,13 @@ const PromoCard = () => {
       />
       <div className="mt-2">
         <div className="flex justify-between ">
-          <h4 className=" font-semibold text-lg w-fit bg-yellow-300 ml-4">
+          <h4 className=" font-semibold text-lg w-fit ml-4">
             My Box Rice Edition
           </h4>
 
-          <div>
-            <span className="bg-red-500">My Box Rice Edition</span>
-          </div>
           <h4 className=" font-semibold text-lg w-fit mr-4">Rs.1,350.00</h4>
         </div>
-        <p className=" text-slate-400 text-sm">
+        <p className=" text-slate-400 text-sm ml-4">
           Only available from 11AM - 3PM
         </p>
         ;
