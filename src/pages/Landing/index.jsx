@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import Top from './Top';
 import BestDeals from './BestDeals';
