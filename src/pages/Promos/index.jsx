@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../../components/Navbar';
 import promotion03 from '../../assets/promotion03.jpg';
+import Cart from '../../components/Cart';
 
 const PromoCard = () => {
   return (
@@ -21,7 +22,6 @@ const PromoCard = () => {
         <p className=" text-slate-400 text-sm ml-4">
           Only available from 11AM - 3PM
         </p>
-        ;
       </div>
     </div>
   );
@@ -31,9 +31,18 @@ const Promos = () => {
   return (
     <div>
       <Navbar />
-      <div className="w-fit flex flex-wrap gap-8 py-10 px-6">
-        <PromoCard />
-        <PromoCard />
+      <div className="flex">
+        <div className="w-[76.6%] mt-14 pt-8 flex flex-wrap gap-4 justify-center">
+          <PromoCard />
+          <PromoCard />
+          <PromoCard />
+          <PromoCard />
+          <PromoCard />
+          <PromoCard />
+        </div>
+        <div>
+          <Cart />
+        </div>
       </div>
     </div>
   );

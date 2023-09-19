@@ -9,7 +9,7 @@ const Navbar = () => {
   const linkStyle =
     'cursor-pointer hover:text-red-700 hover:border-b-[3px] border-red-700';
   return (
-    <div className="w-full z-10 h-16 shadow-md bg-white flex justify-between items-center px-6">
+    <div className="w-full z-10 h-16 shadow-md bg-white flex justify-between items-center px-6 fixed">
       {/* NAV LEFT */}
       <div className="flex gap-32">
         {/* LOGO */}
@@ -18,14 +18,18 @@ const Navbar = () => {
         </Link>
         {/* LINKS */}
         <div className="hidden lg:flex items-center gap-6 text-slate-700 font-bold text-[18px]">
-          <Link className={linkStyle}>HOME</Link>
+          <Link to="/" className={linkStyle}>
+            HOME
+          </Link>
           <Link to="/menu" className={linkStyle}>
             MENU
           </Link>
           <Link to="/promos" className={linkStyle}>
             PROMOS
           </Link>
-          <Link className={linkStyle}>CONTACT US</Link>
+          <Link to="/contact" className={linkStyle}>
+            CONTACT US
+          </Link>
         </div>
       </div>
 
