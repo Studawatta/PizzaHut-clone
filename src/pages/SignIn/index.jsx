@@ -26,7 +26,7 @@ const SignIn = () => {
               {/* USERNAME INPUT */}
               <div className={inputContStyle}>
                 <label>
-                  Username <superScript>*</superScript>{' '}
+                  Username <sup>*</sup>{' '}
                 </label>
                 <input
                   type="text"
@@ -37,7 +37,7 @@ const SignIn = () => {
               {/* PASSWORD INPUT */}
               <div className={inputContStyle}>
                 <label>
-                  Password <superScript>*</superScript>{' '}
+                  Password <sup>*</sup>{' '}
                 </label>
                 <input
                   type="text"
