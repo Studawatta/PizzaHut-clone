@@ -3,6 +3,7 @@ import promotion01 from '../../assets/promotion01.jpg';
 import promotion02 from '../../assets/promotion02.jpg';
 import promotion03 from '../../assets/promotion03.jpg';
 import promotion04 from '../../assets/promotion04.jpg';
+import { Link } from 'react-router-dom';
 
 const BestDeals = () => {
   const promotionStyle =
@@ -17,9 +18,12 @@ const BestDeals = () => {
           <img src={promotion03} className={promotionStyle} />
           <img src={promotion04} className={promotionStyle} />
         </div>
-        <button className="bg-[#739900] text-white w-full rounded-[4px] py-2 hover:bg-[#608000]">
+        <Link
+          to="/promos"
+          className="bg-[#739900] w-full block text-center text-white rounded-[4px] py-2 hover:bg-[#608000]"
+        >
           View all deals
-        </button>
+        </Link>
       </fieldset>
     </div>
   );

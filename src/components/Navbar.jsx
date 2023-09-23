@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom';
 import { CiLocationOn } from 'react-icons/ci';
 import { IoPersonOutline } from 'react-icons/io5';
 import { FiShoppingCart } from 'react-icons/fi';
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
+  const cartAmout = useSelector((state) => state.cart.totalAmount);
   const linkStyle =
     'cursor-pointer hover:text-red-700 hover:border-b-[3px] border-red-700';
   return (
@@ -47,8 +49,12 @@ const Navbar = () => {
         {/* CART */}
         <div className=" relative border border-slate-400 rounded-[20px] px-2 w-12 h-9 flex items-center cursor-pointer hover:text-red-700">
           <FiShoppingCart />
-          <div className=" absolute top-[2px] right-1 bg-slate-200 h-5 font-semibold text-white w-5 text-center text-sm rounded-full">
-            0
+          <div
+            className={` absolute top-[2px] right-1  h-5 font-semibold  w-5 text-center text-sm rounded-full text-white ${
+              cartAmout ? ' bg-red-400' : ' bg-slate-200'
+            }`}
+          >
+            {cartAmout}
           </div>
         </div>
       </div>
