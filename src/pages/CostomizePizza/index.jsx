@@ -30,8 +30,11 @@ const CustomizePizza = () => {
     <div>
       <Navbar />
       <div className="flex">
-        <div className="w-[76.6%] mt-14 pt-8 flex justify-center ">
-          <div key={pizza.id} className="mt-20 flex gap-4 w-2/3">
+        <div className="w-full md:w-[76.6%] mt-14 pt-8 flex justify-center ">
+          <div
+            key={pizza.id}
+            className="mt-20 flex flex-col xl:flex-row gap-4 w-2/3"
+          >
             <img
               src={pizza.pic}
               alt=""

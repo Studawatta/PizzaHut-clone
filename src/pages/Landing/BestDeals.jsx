@@ -12,7 +12,7 @@ const BestDeals = () => {
     <div className="py-16">
       <fieldset className="border-t text-xl font-semibold border-slate-700 text-slate-700 w-3/4 m-auto">
         <legend className="m-auto px-6">Our Most Popular Deals</legend>
-        <div className="grid grid-cols-2 gap-8 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-8 py-8">
           <img src={promotion01} className={promotionStyle} />
           <img src={promotion02} className={promotionStyle} />
           <img src={promotion03} className={promotionStyle} />
