@@ -9,10 +9,10 @@ const MenuCard = ({ id, name, desc, price, pic }) => {
   return (
     <Link
       to={'/menu/' + id}
-      className=" w-[270px] h-fit shadow-[0_4px_5px_#808080] rounded-lg cursor-pointer"
+      className=" w-[270px] h-fit shadow-[0_4px_5px_#808080] rounded-lg overflow-hidden cursor-pointer"
     >
-      <img src={pic} alt="" className=" w-full rounded-[8px_8px_0_0]" />
-      <div className=" px-2 flex flex-col gap-1">
+      <img src={pic} alt="" className=" w-full " />
+      <div className=" px-2 flex flex-col gap-1 bg-white">
         <h1 className=" font-semibold text-sm ">{name}</h1>
         <p className=" text-slate-500 text-[13px]  w-full text-ellipsis line-clamp-2">
           {desc}
@@ -34,7 +34,7 @@ const Menu = () => {
     <div>
       <Navbar />
       <div className="flex">
-        <div className="w-[76.5%] mt-14 pt-8 gap-4 p-4 bg-slate-200 flex flex-wrap">
+        <div className=" w-full md:w-[76.5%] bg-slate-200 mt-14 pt-8 gap-4 p-4 grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-4">
           {pizzas.map((pizza, index) => (
             <MenuCard
               key={index}

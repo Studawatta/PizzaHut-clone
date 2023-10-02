@@ -1,16 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '../../components/Navbar';
 import promotion03 from '../../assets/promotion03.jpg';
 import Cart from '../../components/Cart';
 
 const PromoCard = () => {
   return (
-    <div className="w-[550px] h-[300px] bg-white shadow-[2px_4px_3px_#999] rounded-lg cursor-pointer">
-      <img
-        src={promotion03}
-        className="h-[220px] w-full rounded-[8px_8px_0_0] "
-        alt=""
-      />
+    <div className="w-[100%] h-[300px] bg-white shadow-[2px_4px_3px_#999] rounded-lg overflow-hidden cursor-pointer">
+      <img src={promotion03} className="h-[220px] w-full " alt="" />
       <div className="mt-2">
         <div className="flex justify-between ">
           <h4 className=" font-semibold text-lg w-fit ml-4">
@@ -28,17 +24,22 @@ const PromoCard = () => {
 };
 
 const Promos = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Navbar />
       <div className="flex">
-        <div className="w-[76.6%] mt-14 pt-8 flex flex-wrap gap-4 justify-center">
-          <PromoCard />
-          <PromoCard />
-          <PromoCard />
-          <PromoCard />
-          <PromoCard />
-          <PromoCard />
+        <div className="w-full md:w-[76.6%] mt-14 py-8 ">
+          <div className="w-full grid grid-cols-1  md:grid-cols-2 gap-4 px-4 mx-auto">
+            <PromoCard />
+            <PromoCard />
+            <PromoCard />
+            <PromoCard />
+            <PromoCard />
+            <PromoCard />
+          </div>
         </div>
         <div>
           <Cart />

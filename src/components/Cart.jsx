@@ -32,7 +32,7 @@ const Cart = () => {
   };
 
   return (
-    <div className="fixed top-16 w-[23.5%]">
+    <div className="fixed top-16 w-[23.5%] hidden md:block">
       <div className="border h-14 flex text-xl text-slate-600 gap-2 items-center justify-center border-slate-300">
         <FiShoppingCart />
         <h1 className=" font-bold ">YOUR CART</h1>
