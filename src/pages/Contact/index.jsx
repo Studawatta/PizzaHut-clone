@@ -11,15 +11,15 @@ const ContactUs = () => {
     <div>
       <Navbar />
       <div className="flex bg-slate-200 w-full ">
-        <div className="mt-28 mb-6 m-auto w-[45%] bg-white p-5 rounded-md">
+        <div className="mt-28 mb-6 m-auto md:w-[45%] bg-white p-5 rounded-md">
           <h1 className="text-2xl text-slate-700 text-center font-bold">
             FEEDBACK
           </h1>
           <hr className="my-6" />
           <form>
-            <div className="flex justify-between">
+            <div className="md:flex justify-between">
               {/* LeftContainer */}
-              <div className=" flex flex-col gap-4 w-[49%] ">
+              <div className=" flex flex-col gap-4 w-full md:w-[49%] ">
                 {/* Inquiry Type */}
 
                 <div className={inputContStyle}>
@@ -36,7 +36,7 @@ const ContactUs = () => {
 
                 {/* First Name */}
 
-                <div className="flex justify-between ">
+                <div className="md:flex justify-between ">
                   <div className={`${inputContStyle} flex-[1]`}>
                     <label className={lableStyle}>
                       Title <sup>*</sup>
@@ -102,7 +102,7 @@ const ContactUs = () => {
 
               {/* RightContainer */}
 
-              <div className=" flex flex-col gap-4 w-[49%] ">
+              <div className=" flex flex-col gap-4 w-full md:w-[49%] ">
                 {/* Country */}
 
                 <div className={inputContStyle}>
@@ -114,7 +114,7 @@ const ContactUs = () => {
 
                 {/* Phone NO */}
 
-                <div className="flex justify-between">
+                <div className="md:flex justify-between">
                   <div className={`${inputContStyle} flex-[1] `}>
                     <label className={lableStyle}>
                       Code<sup>*</sup>

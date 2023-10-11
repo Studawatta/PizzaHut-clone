@@ -14,7 +14,7 @@ const SignIn = () => {
   return (
     <div>
       <Navbar />
-      <div className="bg-slate-200 w-full mt-12 h-screen flex justify-center items-center">
+      <div className="bg-slate-200 w-full h-[calc(100vh-64px)] flex mt-16 items-center justify-center">
         <div className="bg-white h-fit shadow-2xl rounded-md p-5">
           <h1 className="text-slate-700 text-xl text-center">
             LET'S START YOUR ORDER
