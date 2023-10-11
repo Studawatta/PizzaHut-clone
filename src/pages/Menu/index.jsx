@@ -5,7 +5,6 @@ import Cart from '../../components/Cart';
 import { pizzas } from '../../data/data';
 import { Link } from 'react-router-dom';
 const MenuCard = ({ id, name, desc, price, pic }) => {
-  // to={`/filteredProducts/${type}/` + id}
   return (
     <Link
       to={'/menu/' + id}

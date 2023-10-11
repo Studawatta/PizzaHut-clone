@@ -14,7 +14,7 @@ const Navbar = () => {
   const linkStyle =
     'cursor-pointer hover:text-red-700 hover:border-b-[3px] border-red-700';
   return (
-    <div className=" top-0 w-full z-10 h-16 shadow-md bg-white flex justify-between items-center lg:px-6 px-20 fixed">
+    <div className=" top-0 w-full z-10 h-16 shadow-md bg-white flex justify-between items-center lg:px-6 px-4 fixed">
       {/* NAV LEFT */}
       <div className=" relative flex lg:gap-32 items-center lg:justify-normal justify-between  lg:w-fit w-full">
         {/* LOGO */}
@@ -39,10 +39,26 @@ const Navbar = () => {
         </div>
 
         {/* MOBILE_VIEW */}
-        <BiMenu
-          className=" text-3xl lg:hidden cursor-pointer"
-          onClick={() => setShowMenu(!showMenu)}
-        />
+        <div className=" flex gap-4 select-none">
+          <BiMenu
+            className=" text-3xl lg:hidden cursor-pointer"
+            onClick={() => setShowMenu(!showMenu)}
+          />
+          <Link
+            to="/shopping_cart"
+            className=" lg:hidden relative border border-slate-400 rounded-[20px] px-2 w-12 h-9 flex items-center cursor-pointer hover:text-red-700"
+          >
+            <FiShoppingCart />
+            <div
+              className={` absolute top-[2px] right-1  h-5 font-semibold  w-5 text-center text-sm rounded-full text-white ${
+                cartAmout ? ' bg-red-400' : ' bg-slate-200'
+              }`}
+            >
+              {cartAmout}
+            </div>
+          </Link>
+        </div>
+
         {showMenu && (
           <div className=" absolute top-12 right-0 bg-white shadow-[0_0_5px_black] p-2 flex flex-col  gap-6 text-slate-700 font-bold text-[14px]">
             <Link to="/" className={linkStyle}>
@@ -68,12 +84,18 @@ const Navbar = () => {
           <CiLocationOn />
         </div>
         {/* SIGN/REGISTER */}
-        <div className="flex items-center gap-2 border border-slate-400 rounded-[20px] px-3 h-9 cursor-pointer hover:text-red-700">
+        <Link
+          to="/sign-in"
+          className="flex items-center gap-2 border border-slate-400 rounded-[20px] px-3 h-9 cursor-pointer hover:text-red-700"
+        >
           <IoPersonOutline />
           Sign In/Register
-        </div>
+        </Link>
         {/* CART */}
-        <div className=" relative border border-slate-400 rounded-[20px] px-2 w-12 h-9 flex items-center cursor-pointer hover:text-red-700">
+        <Link
+          to="/shopping_cart"
+          className=" relative border border-slate-400 rounded-[20px] px-2 w-12 h-9 flex items-center cursor-pointer hover:text-red-700"
+        >
           <FiShoppingCart />
           <div
             className={` absolute top-[2px] right-1  h-5 font-semibold  w-5 text-center text-sm rounded-full text-white ${
@@ -82,7 +104,7 @@ const Navbar = () => {
           >
             {cartAmout}
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   );

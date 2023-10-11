@@ -1,8 +1,15 @@
-import pizza01 from '../assets/pizzas/pizza01.jpg';
-import pizza02 from '../assets/pizzas/pizza02.jpg';
-import pizza03 from '../assets/pizzas/pizza03.jpg';
-import pizza04 from '../assets/pizzas/pizza04.jpg';
-import pizza05 from '../assets/pizzas/pizza05.jpg';
+import {
+  pizza01,
+  pizza02,
+  pizza03,
+  pizza04,
+  pizza05,
+  promotion01,
+  promotion02,
+  promotion03,
+  promotion04,
+} from './images';
+
 const pizzas = [
   {
     id: 1,
@@ -41,4 +48,30 @@ const pizzas = [
   },
 ];
 
-export { pizzas };
+const promos = [
+  {
+    id: 1,
+    name: 'Exclusive online offer 01',
+    price: 4500,
+    pic: promotion01,
+  },
+  {
+    id: 2,
+    name: 'Exclusive online offer 02',
+    price: 2400,
+    pic: promotion02,
+  },
+  {
+    id: 3,
+    name: 'MY BOX PRO',
+    price: 1960,
+    pic: promotion03,
+  },
+  {
+    id: 4,
+    name: 'MY BOX LITE',
+    price: 1500,
+    pic: promotion04,
+  },
+];
+export { pizzas, promos };
