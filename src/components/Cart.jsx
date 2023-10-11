@@ -32,7 +32,7 @@ const Cart = () => {
   };
 
   return (
-    <div className="fixed top-16 w-[23.5%] hidden md:block">
+    <div className="fixed top-16 w-[23.5%] hidden md:block select-none">
       <div className="border h-14 flex text-xl text-slate-600 gap-2 items-center justify-center border-slate-300">
         <FiShoppingCart />
         <h1 className=" font-bold ">YOUR CART</h1>
@@ -50,12 +50,14 @@ const Cart = () => {
               <div className="flex items-center gap-4">
                 <div className="flex items-center  gap-2 text-[20px]">
                   <AiOutlineMinusCircle
-                    className="text-slate-400 cursor-pointer"
+                    className={` cursor-pointer ${
+                      item.amount > 1 ? ' text-slate-700' : 'text-slate-400'
+                    }`}
                     onClick={() => decrease(item.id)}
                   />
                   <span>{item.amount}</span>
                   <AiOutlinePlusCircle
-                    className="text-slate-600 cursor-pointer"
+                    className="text-slate-700 cursor-pointer"
                     onClick={() => increase(item.id)}
                   />
                 </div>
