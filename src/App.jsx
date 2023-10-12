@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Landing from './pages/Landing';
-import SignIn from './pages/SignIn';
-import Promos from './pages/Promos';
-import Menu from './pages/Menu';
-import CustomizePizza from './pages/CostomizePizza';
-import ContactUs from './pages/Contact';
-import ShoppingCart from './pages/ShoppingCart';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import {
+  ContactUs,
+  CustomizePizza,
+  Landing,
+  Menu,
+  Promos,
+  ShoppingCart,
+  SignIn,
+} from './pages';
 
 const App = () => {
   return (

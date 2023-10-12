@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import delivery from '../../assets/delivery.gif';
-import takeaway from '../../assets/takeaway.gif';
+import { delivery, takeaway } from '../../assets';
 import { SlTarget } from 'react-icons/sl';
 import { Link } from 'react-router-dom';
 
