@@ -20,8 +20,8 @@ const PromoCard = ({ id, name, price, pic }) => {
   };
   return (
     <div
-      className={`h-[300px] w-[100%] cursor-pointer overflow-hidden rounded-lg
-                     bg-white shadow-[2px_4px_3px_#999]`}
+      className={`h-[300px] w-[100%] cursor-pointer select-none overflow-hidden
+                     rounded-lg bg-white shadow-[2px_4px_3px_#999]`}
     >
       {/* IMAGE */}
 
@@ -30,14 +30,18 @@ const PromoCard = ({ id, name, price, pic }) => {
         <div className="flex justify-between ">
           {/* NAME */}
 
-          <h4 className=" ml-4 w-fit text-lg font-semibold">{name}</h4>
+          <h4 className=" ml-4 w-fit  font-semibold md:text-sm lg:text-lg">
+            {name}
+          </h4>
           {/* PRICE */}
 
-          <h4 className=" mr-4 w-fit text-lg font-semibold">Rs.{price}.00</h4>
+          <h4 className=" mr-4 w-fit font-semibold lg:text-lg">
+            Rs.{price}.00
+          </h4>
         </div>
 
         <div className="flex w-full justify-between">
-          <p className=" ml-4 text-sm text-slate-400">
+          <p className=" ml-4 text-slate-400 md:text-[10px] lg:text-sm">
             Only available from 11AM - 3PM
           </p>
 
@@ -45,8 +49,8 @@ const PromoCard = ({ id, name, price, pic }) => {
 
           <button
             onClick={addCart}
-            className={`mr-4 w-fit  rounded-md bg-primaryButton px-12 py-1 text-sm
-                       text-white hover:bg-primaryButtonHover`}
+            className={`mr-4 w-fit  rounded-md bg-primaryButton px-5 py-1 text-white hover:bg-primaryButtonHover
+                       md:text-xs lg:text-sm`}
           >
             Add to cart
           </button>
