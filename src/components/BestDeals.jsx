@@ -1,20 +1,25 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   promotion01,
   promotion02,
   promotion03,
   promotion04,
-} from '../../data/images';
-import { Link } from 'react-router-dom';
+} from '../data/images';
 
 const BestDeals = () => {
   const promotionStyle =
     ' rounded-[4px] shadow-[0_4px_5px_#a6a6a6] cursor-pointer';
   return (
     <div className="py-16">
-      <fieldset className="border-t text-xl font-semibold border-slate-700 text-slate-700 w-3/4 m-auto">
+      <fieldset className="m-auto w-3/4 border-t border-slate-700 text-xl font-semibold text-slate-700">
+        {/* HEADER */}
+
         <legend className="m-auto px-6">Our Most Popular Deals</legend>
-        <div className="grid grid-cols-1 md:grid-cols-2  gap-8 py-8">
+
+        {/* PROMOTIONS */}
+
+        <div className="grid grid-cols-1 gap-8  py-8 md:grid-cols-2">
           <Link to="/promos">
             {' '}
             <img src={promotion01} className={promotionStyle} />
@@ -32,9 +37,12 @@ const BestDeals = () => {
             <img src={promotion04} className={promotionStyle} />
           </Link>
         </div>
+
+        {/* VIEW_ALL_BUTTON */}
+
         <Link
           to="/promos"
-          className="bg-[#739900] w-full block text-center text-white rounded-[4px] py-2 hover:bg-[#608000]"
+          className="block w-full rounded-[4px] bg-[#739900] py-2 text-center text-white hover:bg-[#608000]"
         >
           View all deals
         </Link>

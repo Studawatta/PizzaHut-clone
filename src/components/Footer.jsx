@@ -1,19 +1,20 @@
-import React from 'react';
-import fb from '../assets/fb.png';
-import instergram from '../assets/instergram.png';
+import { fb, instergram } from '../assets';
 
 const Footer = () => {
-  const headerStyle = 'text-xl text-white font-bold';
-  const socialMediaStyle = 'w-8 h-8 cursor-pointer';
-  const linkStyle = 'text-slate-100 cursor-pointer text-[14px] font-medium';
-  const linksContStyle = 'hidden md:flex flex-col gap-2 mt-6';
+  const headerStyle = 'text-xl font-bold text-white';
+  const socialMediaStyle = 'h-8 w-8 cursor-pointer';
+  const linkStyle = 'cursor-pointer text-[14px] font-medium text-slate-100';
+  const linksContStyle = 'mt-6 hidden flex-col gap-2 md:flex';
 
   return (
-    <div className="w-full bg-[#262626] py-12">
+    <div className="w-full select-none bg-[#262626] py-12">
       {/* TOP */}
 
-      <div className="w-3/4 m-auto flex-col flex justify-center items-center gap-2 md:items-start md:flex-row md:justify-between">
-        {/* ORDER NOW */}
+      <div
+        className={`m-auto flex w-3/4 flex-col  items-center justify-center
+                      gap-2 md:flex-row md:items-start md:justify-between`}
+      >
+        {/* ORDER_NOW */}
 
         <div>
           <h1 className={headerStyle}>Order Now</h1>
@@ -30,6 +31,7 @@ const Footer = () => {
         </div>
 
         {/* ABOUT */}
+
         <div>
           <h1 className={headerStyle}>About</h1>
           <div className={linksContStyle}>
@@ -41,6 +43,7 @@ const Footer = () => {
         </div>
 
         {/* POLICY */}
+
         <div>
           <h1 className={headerStyle}>Policy</h1>
           <div className={linksContStyle}>
@@ -50,6 +53,7 @@ const Footer = () => {
         </div>
 
         {/* MY PIZZA HUT */}
+
         <div>
           <h1 className={headerStyle}>My Pizza Hut</h1>
           <div className={linksContStyle}>
@@ -59,19 +63,23 @@ const Footer = () => {
       </div>
 
       {/* BOTTOM */}
-      <div className=" w-fit m-auto mt-4">
+
+      <div className=" m-auto mt-4 w-fit">
         <h1 className={`${headerStyle} text-center`}>
           Find Us on Social Media
         </h1>
-        <div className="flex gap-1 m-auto mt-1 w-fit">
+
+        <div className="m-auto mt-1 flex w-fit gap-1">
           <img src={fb} alt="facebook" className={socialMediaStyle} />
           <img src={instergram} alt="instergram" className={socialMediaStyle} />
         </div>
-        <p className="hidden md:block text-slate-100 text-sm mt-4">
+
+        <p className="mt-4 hidden text-sm text-slate-100 md:block">
           2023 Pizzs Hut, Inc. All rights reserved. The Pizza Hut name, logos,
           and related marks are trademarks of Pizza Hut, Inc.
         </p>
-        <p className="text-slate-100 text-sm mt-4 text-center md:hidden">
+
+        <p className="mt-4 text-center text-sm text-slate-100 md:hidden">
           Pizza Hut Sri Lanka
         </p>
       </div>

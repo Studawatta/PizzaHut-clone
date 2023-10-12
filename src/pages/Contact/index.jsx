@@ -1,32 +1,35 @@
-import React from 'react';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
+import { Footer, Navbar } from '../../components';
 
 const ContactUs = () => {
   const lableStyle = 'text-slate-600';
   const inputContStyle = 'flex flex-col gap-1';
   const inputStyle =
-    'w-full border border-slate-400 p-1 rounded-md focus:outline-none text-slate-700';
+    ' w-full rounded-md border border-slate-400 p-1 text-slate-700 focus:outline-none';
   return (
     <div>
+      {/* NAVBAR */}
       <Navbar />
-      <div className="flex bg-slate-200 w-full ">
-        <div className="mt-28 mb-6 m-auto md:w-[45%] bg-white p-5 rounded-md">
-          <h1 className="text-2xl text-slate-700 text-center font-bold">
+      <div className="flex w-full bg-slate-200">
+        <div className="m-auto mb-6 mt-28 rounded-md bg-white p-5 md:w-[45%]">
+          {/* HEADER */}
+          <h1 className="text-center text-2xl font-bold text-slate-700">
             FEEDBACK
           </h1>
+
           <hr className="my-6" />
+
           <form>
-            <div className="md:flex justify-between">
+            <div className="justify-between md:flex">
               {/* LeftContainer */}
-              <div className=" flex flex-col gap-4 w-full md:w-[49%] ">
+
+              <div className=" flex w-full flex-col gap-4 md:w-[49%] ">
                 {/* Inquiry Type */}
 
                 <div className={inputContStyle}>
                   <label className={lableStyle}>
                     Inquiry Type<sup>*</sup>
                   </label>
-                  <select className=" w-full border border-slate-400 p-1 rounded-md focus:outline-none text-slate-700">
+                  <select className=" w-full rounded-md border border-slate-400 p-1 text-slate-700 focus:outline-none">
                     <option>Contact</option>
                     <option>Order Inquiry</option>
                     <option>Appreciation</option>
@@ -36,12 +39,12 @@ const ContactUs = () => {
 
                 {/* First Name */}
 
-                <div className="md:flex justify-between ">
+                <div className="justify-between xl:flex ">
                   <div className={`${inputContStyle} flex-[1]`}>
                     <label className={lableStyle}>
                       Title <sup>*</sup>
                     </label>
-                    <select className="w-16 border border-slate-400 p-1 rounded-md focus:outline-none text-slate-700">
+                    <select className="w-16 rounded-md border border-slate-400 p-1 text-slate-700 focus:outline-none">
                       <option></option>
                       <option>Mr.</option>
                       <option>Mrs.</option>
@@ -102,7 +105,7 @@ const ContactUs = () => {
 
               {/* RightContainer */}
 
-              <div className=" flex flex-col gap-4 w-full md:w-[49%] ">
+              <div className=" flex w-full flex-col gap-4 md:w-[49%] ">
                 {/* Country */}
 
                 <div className={inputContStyle}>
@@ -114,7 +117,7 @@ const ContactUs = () => {
 
                 {/* Phone NO */}
 
-                <div className="md:flex justify-between">
+                <div className="justify-between xl:flex">
                   <div className={`${inputContStyle} flex-[1] `}>
                     <label className={lableStyle}>
                       Code<sup>*</sup>
@@ -122,7 +125,7 @@ const ContactUs = () => {
                     <input
                       type="text"
                       placeholder="+94"
-                      className="border border-slate-400 p-1 rounded-md focus:outline-none w-16 text-slate-700"
+                      className="w-16 rounded-md border border-slate-400 p-1 text-slate-700 focus:outline-none"
                     />
                   </div>
                   <div className={`${inputContStyle} flex-[3]`}>
@@ -141,12 +144,15 @@ const ContactUs = () => {
               </div>
             </div>
 
-            <button className=" bg-primaryButton text-white w-full py-[6px] rounded-md mt-4 hover:bg-primaryButtonHover ">
+            {/* SUBMIT_BUTTON */}
+
+            <button className=" mt-4 w-full rounded-md bg-primaryButton py-[6px] text-white hover:bg-primaryButtonHover ">
               Send
             </button>
           </form>
         </div>
       </div>
+      {/* FOOTER */}
       <Footer />
     </div>
   );

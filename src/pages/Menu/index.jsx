@@ -1,26 +1,41 @@
-import React, { useState } from 'react';
-import Navbar from '../../components/Navbar';
-import Cart from '../../components/Cart';
-
-import { pizzas } from '../../data/data';
 import { Link } from 'react-router-dom';
+import { Cart, Navbar } from '../../components';
+import { pizzas } from '../../data/data';
+
 const MenuCard = ({ id, name, desc, price, pic }) => {
   return (
     <Link
       to={'/menu/' + id}
-      className=" w-[270px] h-fit shadow-[0_4px_5px_#808080] rounded-lg overflow-hidden cursor-pointer"
+      className=" h-fit w-3/4 cursor-pointer overflow-hidden rounded-lg shadow-[0_4px_5px_#808080] sm:w-full"
     >
+      {/* IMAGE */}
+
       <img src={pic} alt="" className=" w-full " />
-      <div className=" px-2 flex flex-col gap-1 bg-white">
-        <h1 className=" font-semibold text-sm ">{name}</h1>
-        <p className=" text-slate-500 text-[13px]  w-full text-ellipsis line-clamp-2">
+
+      <div className=" flex flex-col gap-1 bg-white px-2">
+        {/* NAME */}
+
+        <h1 className=" text-sm font-semibold ">{name}</h1>
+
+        {/* DESCRIPTION */}
+
+        <p className=" line-clamp-2 w-full  text-ellipsis text-[13px] text-slate-500">
           {desc}
         </p>
-        <h1 className=" text-slate-500 text-[12px]  text-right">
+
+        {/* PRICE */}
+
+        <h1 className=" text-right text-[12px]  text-slate-500">
           Starting from{' '}
-          <span className=" text-black font-semibold text-sm">RS.{price}</span>
+          <span className=" text-sm font-semibold text-black">RS.{price}</span>
         </h1>
-        <button className=" w-full rounded-[4px] text-sm py-[6px] bg-primaryButton text-white hover:bg-primaryButtonHover mb-2">
+
+        {/* CUSTOMIZE_BUTTON */}
+
+        <button
+          className={`mb-2 w-full rounded-[4px] bg-primaryButton py-[6px] text-sm
+                      text-white hover:bg-primaryButtonHover`}
+        >
           Customize
         </button>
       </div>
@@ -31,9 +46,15 @@ const MenuCard = ({ id, name, desc, price, pic }) => {
 const Menu = () => {
   return (
     <div>
+      {/* NAVBAR */}
       <Navbar />
       <div className="flex">
-        <div className=" w-full md:w-[76.5%] bg-slate-200 mt-14 pt-8 gap-4 p-4 grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-4">
+        {/* MENU_ITEMS */}
+
+        <div
+          className={`mt-14 flex w-full flex-col items-center gap-4 bg-slate-200 p-4
+                          pt-8 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:w-[76.5%] xl:grid-cols-4`}
+        >
           {pizzas.map((pizza, index) => (
             <MenuCard
               key={index}
@@ -46,7 +67,9 @@ const Menu = () => {
           ))}
         </div>
 
-        <div>
+        {/* CART_COMPONENT */}
+
+        <div className="hidden lg:block">
           <Cart />
         </div>
       </div>
