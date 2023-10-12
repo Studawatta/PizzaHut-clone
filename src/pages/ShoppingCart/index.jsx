@@ -64,11 +64,13 @@ const ShoppingCart = () => {
                 <table className="w-full text-xs md:text-base">
                   {/* TABLE_HEADERS */}
                   <thead>
-                    <tr className="h-10 bg-slate-200 font-medium text-slate-700 ">
+                    <tr className="h-10 bg-slate-200 text-center font-medium text-slate-700 ">
                       <td className="w-2/5 sm:w-1/2">Item</td>
                       <td className=" w-[15%] sm:w-[12%]">Price(Rs.)</td>
-                      <td className=" w-[18%] sm:w-[15%]">Quantity</td>
-                      <td className="w-[27%] sm:w-[23%]">Subtotal(Rs.)</td>
+                      <td className=" w-[19%] sm:w-[15%]">Quantity</td>
+                      <td className="w-[26%] text-left sm:w-[23%]">
+                        Subtotal(Rs.)
+                      </td>
                     </tr>
                   </thead>
                   <tbody>
@@ -77,7 +79,7 @@ const ShoppingCart = () => {
                     {cart.map((item, index) => (
                       <tr
                         key={index}
-                        className=" h-12 border-b border-slate-300 font-semibold"
+                        className=" h-12 border-b border-slate-300 text-center font-semibold"
                       >
                         {/* ITEM_NAME */}
                         <td>{item.name}</td>
@@ -89,7 +91,7 @@ const ShoppingCart = () => {
                         {/* ITEM_QUANTITY */}
 
                         <td>
-                          <div className="flex items-center  gap-2 md:text-lg">
+                          <div className="flex items-center justify-center gap-2 md:text-lg">
                             <AiOutlineMinusCircle
                               className={` cursor-pointer ${
                                 item.amount > 1
@@ -108,11 +110,11 @@ const ShoppingCart = () => {
 
                         {/* SUBTOTAL & DELETE */}
 
-                        <td className="flex h-12 items-center justify-between">
+                        <td className="flex h-12 items-center justify-between pr-1 sm:pr-5">
                           {item.price * item.amount}.00
                           {/* DELETE_ITEM */}
                           <AiOutlineDelete
-                            className=" cursor-pointer text-xl hover:text-red-600 md:mr-5 md:text-2xl"
+                            className=" cursor-pointer text-xl hover:text-red-600  md:text-2xl"
                             onClick={() => delItem(item.id)}
                           />
                         </td>
