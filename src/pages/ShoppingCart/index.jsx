@@ -65,10 +65,10 @@ const ShoppingCart = () => {
                   {/* TABLE_HEADERS */}
                   <thead>
                     <tr className="h-10 bg-slate-200 font-medium text-slate-700 ">
-                      <td className="w-1/2">Item</td>
-                      <td className=" w-[12%]">Price(Rs.)</td>
-                      <td className=" w-[15%]">Quantity</td>
-                      <td className=" w-[23%]">Subtotal(Rs.)</td>
+                      <td className="w-2/5 sm:w-1/2">Item</td>
+                      <td className=" w-[15%] sm:w-[12%]">Price(Rs.)</td>
+                      <td className=" w-[18%] sm:w-[15%]">Quantity</td>
+                      <td className="w-[27%] sm:w-[23%]">Subtotal(Rs.)</td>
                     </tr>
                   </thead>
                   <tbody>
