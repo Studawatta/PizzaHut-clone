@@ -41,7 +41,7 @@ const PromoCard = ({ id, name, price, pic }) => {
         </div>
 
         <div className="flex w-full justify-between">
-          <p className=" ml-4 text-slate-400 md:text-[10px] lg:text-sm">
+          <p className=" ml-4 text-[10px] text-slate-400 lg:text-sm">
             Only available from 11AM - 3PM
           </p>
 
@@ -74,7 +74,7 @@ const Promos = () => {
         <div className="mt-14 w-full py-8 md:w-[76.6%] ">
           {/* PROMOTIONS */}
 
-          <div className="mx-auto grid w-full  grid-cols-1 gap-4 px-4 md:grid-cols-2">
+          <div className="mx-auto grid w-full select-none grid-cols-1 gap-4 px-4 md:grid-cols-2">
             {promos.map((promo, index) => (
               <PromoCard
                 key={index}
