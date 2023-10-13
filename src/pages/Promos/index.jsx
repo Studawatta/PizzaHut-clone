@@ -71,7 +71,7 @@ const Promos = () => {
       <Navbar />
 
       <div className="flex">
-        <div className="mt-14 w-full py-8 md:w-[76.6%] ">
+        <div className="mt-14 w-full select-none py-8 md:w-[76.6%] ">
           {/* PROMOTIONS */}
 
           <div className="mx-auto grid w-full select-none grid-cols-1 gap-4 px-4 md:grid-cols-2">

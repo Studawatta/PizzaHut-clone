@@ -82,7 +82,7 @@ const ShoppingCart = () => {
                         className=" h-12 border-b border-slate-300 text-center font-semibold"
                       >
                         {/* ITEM_NAME */}
-                        <td>{item.name}</td>
+                        <td className="text-left">{item.name}</td>
 
                         {/* ITEM_PRICE */}
 
