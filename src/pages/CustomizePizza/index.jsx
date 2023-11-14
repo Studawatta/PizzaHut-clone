@@ -4,6 +4,7 @@ import { pizzas } from '../../data/data';
 
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../features/cartSlice';
+<<<<<<< HEAD
 import { useState } from 'react';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 
@@ -11,6 +12,10 @@ const CustomizePizza = () => {
   const [isHalfHalfEnabled, setIsHalfHalfEnabled] = useState(false);
   const [showSelectCrust, setShowSelectCrust] = useState(false);
   const [showSelectSize, setShowSelectSize] = useState(false);
+=======
+
+const CustomizePizza = () => {
+>>>>>>> 216d408180ee7aa3e235bb14b154696a3a5fc3de
   // GET_ID_FROM_URL
   const { id } = useParams();
   const pizzaId = parseInt(id);
@@ -33,6 +38,7 @@ const CustomizePizza = () => {
     );
   };
 
+<<<<<<< HEAD
   const inputContainerStyle =
     'flex flex-col overflow-hidden rounded-md border border-slate-300 text-gray-700';
   const inputLabelStyle =
@@ -41,10 +47,13 @@ const CustomizePizza = () => {
   const quentityButtonStyle =
     'flex h-10 cursor-pointer items-center text-xl rounded-md border';
 
+=======
+>>>>>>> 216d408180ee7aa3e235bb14b154696a3a5fc3de
   return (
     <div>
       {/* NAVBAR */}
       <Navbar />
+<<<<<<< HEAD
       <div className="flex ">
         <div className=" mt-14 flex h-[calc(100vh-56px)] justify-center gap-4 bg-gray-100 px-5 pt-8 lg:w-[76.6%]  ">
           <div className=" h-[600px]  w-1/3">
@@ -69,11 +78,39 @@ const CustomizePizza = () => {
 
                 {/* ADD_TO_CART_BUTTON */}
                 {/* <button
+=======
+      <div className="flex">
+        <div className=" mt-14 flex w-full justify-center pt-8 lg:w-[76.6%]  ">
+          <div
+            key={pizza.id}
+            className="mt-20 flex w-2/3 flex-col items-center gap-4 xl:flex-row"
+          >
+            {/* IMAGE */}
+            <img
+              src={pizza.pic}
+              alt=""
+              className=" h-40 w-40 rounded-md object-cover sm:h-60 sm:w-60 xl:h-80 xl:w-80"
+            />
+
+            {/* DETAILS */}
+            <div className="flex flex-col justify-center gap-6">
+              <h1 className="text-center text-xl font-bold xl:text-left xl:text-3xl">
+                {pizza.name}
+              </h1>
+              <p className="font-semibold text-slate-700 xl:text-xl">
+                {pizza.desc}
+              </p>
+              <p className="text-xl font-semibold">Rs.{pizza.price}.00</p>
+
+              {/* ADD_TO_CART_BUTTON */}
+              <button
+>>>>>>> 216d408180ee7aa3e235bb14b154696a3a5fc3de
                 className={`m-auto w-fit rounded-md bg-primaryButton px-12 py-1
                           text-white hover:bg-primaryButtonHover`}
                 onClick={addItemToCart}
               >
                 Add to cart
+<<<<<<< HEAD
               </button> */}
               </div>
             </div>
@@ -166,6 +203,11 @@ const CustomizePizza = () => {
               </button>
             </div>
           </form>
+=======
+              </button>
+            </div>
+          </div>
+>>>>>>> 216d408180ee7aa3e235bb14b154696a3a5fc3de
         </div>
 
         {/* CART_COMPONENT */}

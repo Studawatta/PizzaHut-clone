@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { BiMenu } from 'react-icons/bi';
 import { CiLocationOn } from 'react-icons/ci';
@@ -6,6 +7,16 @@ import { IoPersonOutline } from 'react-icons/io5';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { logo } from '../assets';
+=======
+import { useState } from "react";
+import { BiMenu } from "react-icons/bi";
+import { CiLocationOn } from "react-icons/ci";
+import { FiShoppingCart } from "react-icons/fi";
+import { IoPersonOutline } from "react-icons/io5";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { logo } from "../assets";
+>>>>>>> 216d408180ee7aa3e235bb14b154696a3a5fc3de
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -13,7 +24,11 @@ const Navbar = () => {
   const cartAmout = useSelector((state) => state.cart.totalAmount);
 
   const linkStyle =
+<<<<<<< HEAD
     'cursor-pointer border-red-700 hover:border-b-[3px] hover:text-red-700';
+=======
+    "cursor-pointer border-red-700 hover:border-b-[3px] hover:text-red-700";
+>>>>>>> 216d408180ee7aa3e235bb14b154696a3a5fc3de
 
   return (
     <div className=" fixed top-0 z-10 flex h-16 w-full items-center justify-between bg-white px-4 shadow-md lg:px-6">
@@ -62,7 +77,11 @@ const Navbar = () => {
             <FiShoppingCart />
             <div
               className={` absolute right-1 top-[2px]  h-5 w-5  rounded-full text-center text-sm font-semibold text-white ${
+<<<<<<< HEAD
                 cartAmout ? ' bg-red-400' : ' bg-slate-200'
+=======
+                cartAmout ? " bg-red-400" : " bg-slate-200"
+>>>>>>> 216d408180ee7aa3e235bb14b154696a3a5fc3de
               }`}
             >
               {cartAmout}
@@ -118,7 +137,11 @@ const Navbar = () => {
           <FiShoppingCart />
           <div
             className={` absolute right-1 top-[2px]  h-5 w-5  rounded-full text-center text-sm font-semibold text-white ${
+<<<<<<< HEAD
               cartAmout ? ' bg-red-400' : ' bg-slate-200'
+=======
+              cartAmout ? " bg-red-400" : " bg-slate-200"
+>>>>>>> 216d408180ee7aa3e235bb14b154696a3a5fc3de
             }`}
           >
             {cartAmout}
